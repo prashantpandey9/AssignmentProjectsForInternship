@@ -1,0 +1,46 @@
+{% load static %}
+<!-- Made With Love by Prashant Pandey. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="">
+    <meta name="theme-color" content="">
+    <meta name="title" content="">
+    <title>Contactus</title>
+    <meta name="description" content="">
+    <!-- Favicon icon -->
+    <link href="" rel="shortcut icon">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:width" content="">
+    <meta property="og:image:height" content="">
+    <meta property="twitter:card" content="">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="">
+    <meta name="twitter:site" value="">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="">
+    
+    {%include 'css.html'%}
+    
+  </head>
+  <body style="background-color:rgba(0,0,0,1);"   >
+
+  {% include 'nav.html' %}
+  {% block content %}
+  
+  {% endblock content %}
+
+	
+  {%include 'footer.html'%}
+
+	{%include 'js.html'%}
+  
+  </body>
+</html>

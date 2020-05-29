@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{%load static%}
+{% block content %}
+
+<style>
+cc{
+	background-color: rgba(0,0,0,0.5)!important;
+}
+label{
+	float: left;
+}
+@media(max-width:425px)
+{
+
+.contact .col-sm-6 p {
+  margin-left: 12px;
+  font-size: .8rem;
+}
+}
+@media(max-width:768px){
+	.contact .col-sm-6 p {
+		margin-left: 12px;
+		font-size: 1rem;
+	}
+}
+</style>
+<script>
+	
+    document.getElementsByClassName("nav-link")[2].classList.add("active");
+</script>
+<!-- Contact Section Started -->
+	<section class="contact" id="contact">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12" >
+					<center><h1 style="border-bottom: solid #fff  ;width:250px ;"> CONTACT US </h1></center>
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6 cc">
+					
+					<form class="form-text" method="POST" onsubmit="alert('Thanks for contacting us')">
+						{% csrf_token %}
+						<div class="form-group">
+							<label  for="subject">Subject :</label>
+							<input name="subject" type="text" class="form-control" placeholder="subject">
+						</div>
+						<div class="form-group">
+							<label  for="email">Email address:</label>
+							<input name="mail" type="email" class="form-control"  placeholder="user_name@mail.com">
+						</div>
+						<div class="form-group">
+							<label   for="pwd" >Name:</label>
+							<input name="name" type="text" class="form-control"  placeholder="your_name">
+						</div>
+						<div class="form-group">
+							<label  for="pwd" > Query:</label>
+							<textarea type="text" name="query" class="form-control"  placeholder="Type Query here....."></textarea>
+						</div>
+						<div class="form-group">
+							<label  for="pwd" > Message:</label>
+							<textarea type="text" name="message" class="form-control" placeholder="Type something here....."></textarea>
+						</div>
+						
+						<div> 
+						<button type="submit" class="btn btn-primary">Submit</button>
+						</div>
+					</form>
+					</div>
+					<div class="col-sm-3"></div>				
+				</div>
+			</div>
+		</div>		
+	</section>
+<!-- Contact Section Ended -->
+{% endblock content %}
